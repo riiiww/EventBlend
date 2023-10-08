@@ -30,9 +30,11 @@
     font-weight: 400;
     width: 150px;
     height: 30px;
-    justify-content: center; 
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Вирівняти текст по центру по горизонталі */
+    align-items: center; /* Вирівняти текст по центру по вертикалі */
   }
+  
   .nav{
     display: flex;
   }
@@ -41,7 +43,6 @@
   .header__block4 a{
     color: #FFF;
     font-size: 30px;
-    padding-right: 20px;
     text-decoration: none;
   }
   
@@ -84,5 +85,9 @@
     padding-right: 50px;
   }
   
+  .header__block4{
+    display: flex;
+    gap: 67px;
+  }
   
   

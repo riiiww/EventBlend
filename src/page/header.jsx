@@ -39,16 +39,9 @@ function Header () {
           </a>
         </div>
         <div class="header__block4">
-          <a href="/">
-            <img src={sity_icon} alt="sity"></img>
-          </a>
-          <a href="/">
-            Оберіть місто
-          </a>
-          <a href="/">
-            Увійти
-          </a>
-        </div>
+                <a href="/"><img src={sity_icon} alt="sity"></img>Оберіть місто</a>
+                <a href="/">Увійти</a>
+            </div>
             </div>
         </header>
 
