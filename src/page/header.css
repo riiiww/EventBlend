@@ -104,11 +104,12 @@ body {
 @media screen and (min-width: 1440px) and (max-width: 1900px) {
   .header {
     max-width: 1440px;
+    height: 140px;
   }
 
   .header__wrapper {
     max-width: 1440px;
-    
+    height: 140px;
   }
 
   .container {

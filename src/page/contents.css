@@ -76,6 +76,7 @@
 
   .content__block1 {
     padding-top: 180px;
+    position: absolute;
   }
 
   .content__block2 {
