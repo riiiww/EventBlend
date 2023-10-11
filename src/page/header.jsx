@@ -1,6 +1,6 @@
 import './header.css'
 import search_icon from "../png/icons/search-icon.svg"
-import calendar_icon from "../png/icons/calendar-icon.svg"
+import message_icon from "../png/icons/message-icon.svg"
 import sity_icon from "../png/icons/sity-svg.svg"
 
 
@@ -35,7 +35,7 @@ function Header () {
             <img src={search_icon} alt="search"></img>
           </a>
           <a href="/">
-            <img src={calendar_icon} alt="calendar"></img>
+            <img src={message_icon} alt="calendar"></img>
           </a>
         </div>
         <div class="header__block4">

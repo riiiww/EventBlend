@@ -1,92 +1,153 @@
-*,*:before,*:after{
-    box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(107deg, #000 0.47%, rgba(0, 0, 0, 0.84) 47.64%, rgba(0, 0, 0, 0.82) 66.31%, rgba(0, 0, 0, 0.84) 78.23%, rgba(0, 0, 0, 0.89) 100%);
+  font-family: Montserrat;
+}
+
+.container {
+  width: 1920px;
+}
+
+.header {
+  max-width: 1920px;
+  height: 155px;
+  margin-left: 0px;
+  margin-right: 0px; /* Центруємо блок по горизонталі */
+  padding: 0; /* Додаємо відступи для адаптації до різних розмірів */
+  position: relative; /* Додаємо позиціонування для лого */
+}
+
+.header.header {
+  width: 1920px;
+}
+
+.div.header__wrapper {
+  width: 1920px;
+}
+
+.header__wrapper {
+  max-width: 1920px;
+  height: 155px;
+  margin: 0 auto; /* Центруємо блок по горизонталі */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Додаємо позиціонування для лого */
+}
+
+.nav a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 30px;
+}
+
+.header__block4 a {
+  color: #FFF;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.header__block4 {
+  margin-right: 5%;
+  display: flex;
+  gap: 35px;
+}
+
+.logo {
+  color: #FFF;
+  font-size: 75px;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  margin-left: 30px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.logo2 {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 75px;
+  font-weight: 400;
+  margin-left: 35px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.header__block2 {
+  display: flex;
+  text-align: center;
+}
+
+.header__block3 img{
+  margin-right: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+.header__block3 a{
+  margin-right: 20px;
+}
+
+
+@media screen and (min-width: 1440px) and (max-width: 1900px) {
+  .header {
+    max-width: 1440px;
   }
-  html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
+
+  .header__wrapper {
+    max-width: 1440px;
+    
   }
-  body {
-    background: linear-gradient(107deg, #000 0.47%, rgba(0, 0, 0, 0.84) 47.64%, rgba(0, 0, 0, 0.82) 66.31%, rgba(0, 0, 0, 0.84) 78.23%, rgba(0, 0, 0, 0.89) 100%);
-    font-family: Montserrat;
+
+  .container {
+    max-width: 1440px;
   }
-  
-  .header{
-    width: 1920px;
-    height: 155px;
-  }
-  
-  .header__wrapper{
-    height: 155px;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
+
   .nav a {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 400;
-    width: 150px;
-    height: 30px;
-    display: flex;
-    justify-content: center; /* Вирівняти текст по центру по горизонталі */
-    align-items: center; /* Вирівняти текст по центру по вертикалі */
+    font-size: 25px;
+  }
+
+  .header__block3 img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .header__block3 a {
+    margin-right: 15px;
+  }
+
+  .header__block4 {
+    margin-right: 1.5%;
+  }
+
+  .logo {
+    font-size: 60px;
+    margin-left: 30px;
+
+  }
+
+  .logo2 {
+    font-size: 60px;
+    margin-left: 35px;
   }
   
-  .nav{
-    display: flex;
+  .header.header {
+    width: 1440px;
   }
   
-  
-  .header__block4 a{
-    color: #FFF;
-    font-size: 30px;
-    text-decoration: none;
+  .header.header__wrapper {
+    width: 1440px;
   }
-  
-  .logo{
-    margin-top: 0;
-    padding-left: 30px;
-    padding-top: 50px;
-    color: #FFF;
-    font-size: 75px;
-    font-weight: 400;
-    position: absolute;
-    z-index: 2;
-  }
-  
-  .logo2{
-    padding-left: 35px;
-    padding-top: 50px;
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 75px;
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-  }
-  .header__block1 {
-    margin-right: 100px;
-  }
-  
-  .header__block2 {
-    margin-right: 150px; 
-  }
-  
-  .header__block3 {
-    margin-right: 88px;
-    display: flex;
-  }
-  
-  .header__block3 a{
-    padding-right: 50px;
-  }
-  
-  .header__block4{
-    display: flex;
-    gap: 69px;
-  }
-  
-  
+}
