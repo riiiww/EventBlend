@@ -61,6 +61,7 @@ body {
 .header__block4 {
   margin-right: 5%;
   display: flex;
+  align-items: center;
   gap: 35px;
 }
 
@@ -131,6 +132,14 @@ body {
 
   .header__block4 {
     margin-right: -1.5%;
+  }
+
+  .header__block4 a {
+    font-size: 25px;
+  }
+
+  .header__block4 img {
+    width: 27px;
   }
 
   .logo {
