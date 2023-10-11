@@ -4,7 +4,7 @@ import main_page_image from "../png/pictures/main-page.png";
 function Contents() {
   return (
     <header>
-      <div className="container">
+      <div className="container1">
         <div className="content__block2">
           <div className="content">
           </div>
