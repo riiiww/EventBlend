@@ -1,5 +1,6 @@
 import "./contents.css";
 import main_page_image from "../png/pictures/main-page.png";
+//import { Link } from 'react-router-dom';
 
 function Contents() {
   return (

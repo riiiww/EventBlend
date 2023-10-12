@@ -1,12 +1,15 @@
-import './header.css'
-import search_icon from "../png/icons/search-icon.svg"
-import message_icon from "../png/icons/message-icon.svg"
-import sity_icon from "../png/icons/sity-svg.svg"
+import './header.css';
+import search_icon from "../png/icons/search-icon.svg";
+import message_icon from "../png/icons/message-icon.svg";
+import sity_icon from "../png/icons/sity-svg.svg";
+import { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
 
 
 function Header () {
     return(
-        <div className="container">
+        <Fragment>
+          <div className="container">
             <header className='header'>
          <div class="header__wrapper">
             <div class="header__block1">
@@ -46,6 +49,8 @@ function Header () {
         </header>
 
         </div>
+        <Outlet/>
+        </Fragment>
     )
 }
 export default Header;
