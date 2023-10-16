@@ -1,0 +1,90 @@
+.animationLines {
+    width: 100%;
+    margin: 120px 0; 
+    position: absolute;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+}
+
+.signupBlock {
+    width: 800px;
+    height: 800px;
+    border-radius: 190px;
+    background: rgba(0, 0, 0, 0.30);
+    font-family: Montserrat;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.signupBlock1 {
+    padding-top: 100px;
+}
+
+.signupBlock2, .signupBlock3, .signupBlock4 {
+    display: grid;
+    justify-content: center;
+}
+
+.login, .email, .password {
+    width: 600px;
+    height: 85px;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    font-size: 24px; 
+    color: #fff;
+}
+
+.signupBlock5 a {
+    width: 310px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.50);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.signupBlock5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 240px;
+  }
+  
+  .signupBlock6 a {
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .signupBlock6 {
+    display: flex;
+    align-items: center;
+    margin-left: 153px;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .signupBlock6 h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  
+  .signupBlock2 h1, .signupBlock3 h1, .signupBlock4 h1 {
+    font-size: 32px;
+    font-weight: 400;
+  }

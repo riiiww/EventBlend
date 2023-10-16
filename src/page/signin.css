@@ -1,0 +1,55 @@
+.animationLines {
+    width: 100%;
+    margin: 120px 0; 
+    position: absolute;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+}
+
+.signinBlock {
+    width: 800px;
+    height: 800px;
+    border-radius: 190px;
+    background: rgba(0, 0, 0, 0.30);
+    font-family: Montserrat;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.signinBlock2, .signinBlock3, .signinBlock4 {
+    display: grid;
+    justify-content: center;
+}
+
+.signinBlock2 h1, .signinBlock3 h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.signinBlock4 a{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.signinBlock1 {
+    padding-top: 195px;
+}
+
+.signinBlock3 {
+    padding-top: 52px;
+}
+
+.signinBlock4 {
+    padding-top: 35px;
+}

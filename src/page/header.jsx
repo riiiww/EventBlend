@@ -4,6 +4,7 @@ import message_icon from "../png/icons/message-icon.svg";
 import sity_icon from "../png/icons/sity-svg.svg";
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Header () {
@@ -25,9 +26,7 @@ function Header () {
             <a href="/">
               Головна
             </a>
-            <a href="/">
-              Події
-            </a>
+            <Link to="/Events">Події</Link>
             <a href="/">
               Квитки
             </a>
@@ -43,7 +42,7 @@ function Header () {
         </div>
         <div class="header__block4">
                 <a href="/"><img src={sity_icon} alt="sity"></img>Оберіть місто</a>
-                <a href="/">Увійти</a>
+                <Link to="/Signup">Увійти</Link>
             </div>
             </div>
         </header>

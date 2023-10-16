@@ -1,0 +1,43 @@
+.container5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories1, .categories2 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Заповнити всю ширину блоку */
+}
+
+.eventBlock1, .eventBlock2, .eventBlock3, .eventBlock4, .eventBlock5, .eventBlock6 {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px; /* Збільшіть це значення, якщо потрібно зменшити відстань між блоками */
+    margin-top: 60px;
+    text-align: center;
+}
+
+.eventBlock1 img, .eventBlock2 img, .eventBlock3 img, .eventBlock4 img, .eventBlock5 img, .eventBlock6 img {
+    max-width: 100%;
+    display: block; /* Забезпечує правильне центрування */
+    margin: 0 auto; /* Розміщення по центру */
+    text-align: center;
+}
+
+.eventBlock1 a, .eventBlock2 a, .eventBlock3 a, .eventBlock4 a, .eventBlock5 a, .eventBlock6 a {
+    position: relative;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 400;
+    top: 50%;
+    left: 50%; /* Розміщення в центрі горизонталі */
+    transform: translate(-50%, -50%); /* Зсув на 50% ширини та висоти тексту */
+    color: #fff;
+    padding: 10px 20px; /* Поправки для стилізації тексту */
+    z-index: 1; /* Розміщення поверх інших елементів */
+}
