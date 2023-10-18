@@ -41,3 +41,24 @@
     padding: 10px 20px; /* Поправки для стилізації тексту */
     z-index: 1; /* Розміщення поверх інших елементів */
 }
+
+.CreateEvent {
+    display: flex;
+    margin-top: 67px;
+    position: absolute;
+    color: white;
+}
+
+.container6 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 84px 0px 84px;
+}
+
+.CreateEvent a {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}

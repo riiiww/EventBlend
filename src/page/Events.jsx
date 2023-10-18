@@ -5,11 +5,19 @@ import exhibitions_png from "../png/pictures/exhibitions.png"
 import festivals_png from "../png/pictures/festivals.png"
 import premieres_png from "../png/pictures/premieres.png"
 import theaters_png from "../png/pictures/theaters.png"
+import plus_icon from "../png/icons/plus-icon.svg"
+import { Link } from 'react-router-dom';
 
 
 function Events() {
     return(
         <header>
+            <div className="container6">
+                <div className="CreateEvent">
+                    <img style={{height: "16px"}}src={plus_icon} alt="plus_icon"></img>
+                    <Link to="/CreateEvent">Створити подію</Link>
+                </div>
+            </div>
             <div className="container5">
                 <div className="categories1">
                     <div className="eventBlock1">
