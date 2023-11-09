@@ -30,34 +30,44 @@ function Events() {
                     </div>
                     <div className="eventBlock2">
                         <a href="/">
-                            <img src={theaters_png} alt="theaters_image" />
-                            <span className="image-text">Театри</span>
+                            <Link to="/ConcertEvents">
+                                <img src={theaters_png} alt="theaters_image" />
+                                <span className="image-text">Театри</span>
+                            </Link>
                         </a>
                     </div>             
                     <div className="eventBlock3">
                         <a href="/">
-                            <img src={festivals_png} alt="festivals_image" />
-                            <span className="image-text">Фестивалі</span>
+                            <Link to="/ConcertEvents">
+                                <img src={festivals_png} alt="festivals_image" />
+                                <span className="image-text">Фестивалі</span>
+                            </Link>
                         </a>
                     </div>
                 </div>
                 <div className="categories2">
                     <div className="eventBlock4">
                         <a href="/">
-                            <img src={exhibitions_png} alt="exhibitions_image" />
-                            <span className="image-text">Виставки</span>
+                            <Link to="/ConcertEvents">
+                                <img src={exhibitions_png} alt="exhibitions_image" />
+                                <span className="image-text">Виставки</span>
+                            </Link>
                         </a>
                     </div>
                     <div className="eventBlock5">
                         <a href="/">
-                            <img src={premieres_png} alt="premieres_image" />
-                            <span className="image-text">Прем'єри</span>
+                            <Link to="/ConcertEvents">
+                                <img src={premieres_png} alt="premieres_image" />
+                                <span className="image-text">Прем'єри</span>
+                            </Link>
                         </a>
                     </div>
                     <div className="eventBlock6">
                         <a href="/">
-                            <img src={corporations_png} alt="corporations_image" />
-                            <span className="image-text">Корпоративи</span>
+                            <Link to="/ConcertEvents">
+                                <img src={corporations_png} alt="corporations_image" />
+                                <span className="image-text">Корпоративи</span>
+                            </Link>
                         </a>
                     </div>
                 </div>

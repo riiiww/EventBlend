@@ -6,6 +6,7 @@ import Events from "../src/page/Events";
 import CreateEvent from "../src/page/CreateEvent"
 import ConcertEvents from "./page/ConcertEvents";
 import EditEvents from "./page/EditEvents";
+import EventRegistration from "./page/EventRegistration";
 import { Routes, Route } from "react-router-dom";
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
           <Route path = 'createEvent' element={<CreateEvent />} />
           <Route path = 'concertEvents' element={<ConcertEvents />} />
           <Route path = 'editEvents' element={<EditEvents />} />
+          <Route path = 'eventRegistration' element={<EventRegistration />} />
         </Route>
   </Routes>
   );

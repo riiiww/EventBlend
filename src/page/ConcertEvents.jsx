@@ -23,7 +23,7 @@ function ConcertsEvent() {
                 </div>
                 <Link to="/EditEvents"><img src={pencil_icon} alt="pencil_icon" className="pencil-icon"></img></Link>
                 <div className="event-actions">
-                    <Link to="/buy-ticket" className="buy-button">Придбати</Link>
+                    <Link to="/EventRegistration" className="buy-button">Придбати</Link>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@ function ConcertsEvent() {
                 </div>
                 <Link to="/EditEvents"><img src={pencil_icon} alt="pencil_icon" className="pencil-icon"></img></Link>
                 <div className="event-actions">
-                    <Link to="/buy-ticket" className="buy-button">Придбати</Link>
+                    <Link to="/EventRegistration" className="buy-button">Придбати</Link>
                 </div>
             </div>
         </header>
