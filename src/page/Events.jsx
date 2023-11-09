@@ -22,8 +22,10 @@ function Events() {
                 <div className="categories1">
                     <div className="eventBlock1">
                         <a href="/">
-                            <img src={concerts_png} alt="concerts_image" />
-                            <span className="image-text">Концерти</span>
+                            <Link to="/ConcertEvents">
+                                <img src={concerts_png} alt="concerts_image" />
+                                <span className="image-text">Концерти</span>
+                            </Link>
                         </a>
                     </div>
                     <div className="eventBlock2">

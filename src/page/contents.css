@@ -28,7 +28,7 @@
 
 .content {
   width: 1480px;
-  height: 810px;
+  height: 100%;
   border-radius: 164px 0px 0px 164px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 68.21%, rgba(255, 255, 255, 0.02) 100%, #000000, #FFFFFF1A);
   display: flex;

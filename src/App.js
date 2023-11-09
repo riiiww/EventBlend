@@ -4,6 +4,8 @@ import Signup from "../src/page/Signup";
 import Signin from "../src/page/Signin";
 import Events from "../src/page/Events";
 import CreateEvent from "../src/page/CreateEvent"
+import ConcertEvents from "./page/ConcertEvents";
+import EditEvents from "./page/EditEvents";
 import { Routes, Route } from "react-router-dom";
 function App() {
   
@@ -15,6 +17,8 @@ function App() {
           <Route path = 'signin' element={<Signin />} />
           <Route path = 'events' element={<Events />} />
           <Route path = 'createEvent' element={<CreateEvent />} />
+          <Route path = 'concertEvents' element={<ConcertEvents />} />
+          <Route path = 'editEvents' element={<EditEvents />} />
         </Route>
   </Routes>
   );
