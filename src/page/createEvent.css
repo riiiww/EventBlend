@@ -22,7 +22,7 @@
     padding: 54px 0 0 0;
     width: 1200px;
     height: auto;
-    border-radius: 190px;
+    border-radius: 170px;
     background: rgba(0, 0, 0, 0.30);
     position: relative;
     z-index: 1;
@@ -88,7 +88,7 @@
 
 .ButtonNewEvent {
     width: 300px;
-    height: 80px;
+    height: 70px;
     border-radius: 90px;
     background: rgba(0, 0, 0, 0.50);
     display: flex;
@@ -117,7 +117,6 @@
     padding-left: 25px;
 }
 
-/* Стилі для картинки-іконки в полі вводу "date" */
 .Date::-webkit-calendar-picker-indicator {
     filter: invert(1);
     width: 37px; 
