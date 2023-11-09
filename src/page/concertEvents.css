@@ -14,12 +14,12 @@ body {
 .event {
     display: flex;
     align-items: center;
-    width: 1700px; /* Відредагуйте потрібну ширину */
+    width: 1700px;
     height: 410px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.35);
     padding: 20px;
-    margin-bottom: 135px; /* Відстань між блоками .event */
+    margin-bottom: 135px;
     position: relative;
 }
 
