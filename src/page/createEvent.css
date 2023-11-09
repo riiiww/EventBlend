@@ -30,9 +30,9 @@
 
 .DataFillingTable {
     display: flex;
-    flex-direction: column; /* Встановлюємо напрямок колонки для розміщення всіх елементів в стовпці */
-    align-items: flex-start; /* Вирівнюємо всі елементи зліва */
-    gap: 0px; /* Відступ між елементами */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 0px; 
     padding: 0px 145px 50px 145px;
 }
 
@@ -45,7 +45,7 @@
 
 .EventTitle, .EventCategory, .Venue, .Date, .Time {
     width: 450px;
-    height: 60px;
+    height: 70px;
     border-radius: 90px;
     background: rgba(0, 0, 0, 0.50);
 }
