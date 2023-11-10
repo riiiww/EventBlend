@@ -1,0 +1,120 @@
+.animationLines {
+    width: 100%;
+    margin: 120px 0; 
+    position: absolute;
+}
+
+.BuyTicket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.BuyTicketContent {
+    width: 1100px;
+    height: 800px;
+    border-radius: 190px;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    text-align: center;
+}
+
+.InputDataContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputdataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px; 
+    margin-right: 92px;  
+    margin-left: 90px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;    
+}
+
+.inputContainer label {
+    margin-bottom: 5px; 
+}
+
+.TicketPrice {
+    color: white;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.creditCard {
+    width: 580px;
+    height: 70px;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    font-size: 24px;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.expiryDate {
+    width: 250px;
+    height: 70px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.50);
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.cvv2 {
+    width: 150px;
+    height: 70px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.50);
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.confirmationMessage {
+    width: 900px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.payButton {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.50);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px; 
+}
+
+.labelBuyTicket {
+    font-family: Montserrat;
+    font-size: 32px;
+    color:white;
+    align-self: flex-start;
+    margin-bottom: 0;
+}

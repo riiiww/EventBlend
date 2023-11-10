@@ -13,7 +13,7 @@ function Signup() {
             <div className="signupBlock1">
               <div className="signupBlock2">
                 <h1>Логін:</h1>
-                <input className="login" type="text" id="log" name="name" required minlength="4" maxlength="12" />
+                <input className="login" type="text" id="log" name="name" required minlength="4" maxlength="15" />
               </div>
               <div className="signupBlock3">
                 <h1>E-mail:</h1>

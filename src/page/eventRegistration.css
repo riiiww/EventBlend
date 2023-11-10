@@ -52,7 +52,7 @@
 }
 
 .quantityTickets {
-    width: 192px;
+    width: 180x;
     height: 70px;
     border-radius: 90px;
     background: rgba(0, 0, 0, 0.50);
@@ -74,7 +74,7 @@
     background: rgba(0, 0, 0, 0.50);
 }
 
-label {
+.labelEventRegistration {
     font-family: Montserrat;
     font-size: 32px;
     color:white;
