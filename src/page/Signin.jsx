@@ -12,14 +12,14 @@ function Signin() {
                         <div className="signinBlock1">
                             <div className="signinBlock2">
                                 <h1>E-mail:</h1>
-                                <input className="email" type="email" id="email" name="email" required minlength="6" maxlength="35" />
+                                <input className="Email" type="email" id="email" name="email" required minlength="6" maxlength="35" />
                             </div>
                             <div className="signinBlock3">
                                 <h1>Пароль:</h1>
                                 <input className="password" type="password" id="password" name="password" required minlength="6" maxlength="20" />
                             </div>
                             <div className="signinBlock4">
-                                <a href="/">Увійти</a>
+                                <button>Увійти</button>
                             </div>
                         </div>
                     </div>
