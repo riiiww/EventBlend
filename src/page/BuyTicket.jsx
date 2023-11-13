@@ -53,7 +53,7 @@ function BuyTicket() {
         <header className="BuyTicket">
             <Lottie animationData={animationLines} className="animationLines" />
             <div className="BuyTicketContent">
-                <h1 className="TicketPrice">До сплати - 100<img src={uah_icon_white} alt="uah_icon"></img></h1>
+                <h1 className="TextTicketPrice">До сплати - 100<img src={uah_icon_white} alt="uah_icon"></img></h1>
                 <div className="inputContainer">
                     <label className="labelBuyTicket" htmlFor="creditCard">Номер картки:</label>
                     <input className="creditCard" type="text" id="creditCard" name="creditCard" pattern="\d*" maxLength="19" placeholder="0000 0000 0000 0000" required onInput={(e) => formatCreditCardNumber(e.target)} />
