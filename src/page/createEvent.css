@@ -8,8 +8,8 @@
     color: white;
     font-size: 40px;
     font-weight: 400;
-    text-align: center; /* Центрування тексту */
-    margin-top: 0px; /* Доданий відступ зверху */
+    text-align: center;
+    margin-top: 0px;
     padding-bottom: 10px;
 }
 .animationLines {
@@ -36,6 +36,12 @@
     padding: 0px 145px 50px 145px;
 }
 
+.createEventBlock5 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 60px; 
+}
+
 .createEventBlock1 h1, .createEventBlock2 h1, .createEventBlock3 h1, .createEventBlock4 h1, .createEventBlock5 h1 {
     color:white;
     font-size: 25px;
@@ -43,11 +49,27 @@
     padding-left: 20px;
 }
 
-.EventTitle, .EventCategory, .Venue, .Date, .Time {
+.EventTitle, .EventCategory, .Venue, .Date {
     width: 450px;
     height: 70px;
     border-radius: 90px;
     background: rgba(0, 0, 0, 0.50);
+}
+
+.Time {
+    width: 210px;
+    height: 70px;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.TicketPrice {
+    width: 180px;
+    height: 70px;;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    font-size: 25px;
 }
 
 .CreateEventt {
@@ -60,6 +82,7 @@
 .Image {
     padding-top: 45px;
 }
+
 .ButtonAddImage {
     width: 400px;
     height: 70px;

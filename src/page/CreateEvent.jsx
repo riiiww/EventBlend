@@ -1,8 +1,8 @@
-import "./createEvent.css"
-import noImage from "../png/pictures/no-image.png"
-import imageIcon from "../png/icons/image-icon.svg"
+import "./createEvent.css";
+import noImage from "../png/pictures/no-image.png";
+import imageIcon from "../png/icons/image-icon.svg";
 import Lottie from 'lottie-react';
-import animationLines from "./animation/animationLines.json"
+import animationLines from "./animation/animationLines.json";
 
 function CreateEvent() {
     return(
@@ -22,15 +22,21 @@ function CreateEvent() {
                         </div>
                         <div className="createEventBlock3">
                             <h1>Місце проведення:</h1>
-                            <input className="Venue" type="text" id="venue" name="venue" required minlength="6" maxlength="20" />
+                            <input className="Venue" type="text" id="city" name="city" required minlength="6" maxlength="20" />
                         </div>
                         <div className="createEventBlock4">
                             <h1>Дата:</h1>
                             <input className="Date" type="date" id="inputDate" name="date" required />
                         </div>
                         <div className="createEventBlock5">
-                            <h1>Час:</h1>
-                            <input className="Time" type="time" id="inputTime" name="time" required />
+                            <div>
+                                <h1>Час:</h1>
+                                <input className="Time" type="time" id="inputTime" name="time" required />
+                            </div>
+                            <div>
+                                <h1>Ціна квитка:</h1>
+                                <input className="TicketPrice" type="text" id="ticketPrice" name="ticketPrice" maxlength="4" required />
+                            </div>
                         </div>
                     </div>
                     <div className="CreateEventt">

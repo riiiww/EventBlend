@@ -24,9 +24,15 @@ function EditEvents() {
                         <h1>Дата:</h1>
                         <input className="Date" type="date" id="inputDate" name="date" required />
                     </div>
-                    <div className="InputTime">
-                        <h1>Час:</h1>
-                        <input className="Time" type="time" id="inputTime" name="time" required />
+                    <div className="InputTimeAndTicketPrice">
+                        <div>
+                            <h1>Час:</h1>
+                            <input className="Time" type="time" id="inputTime" name="time" required />
+                        </div>
+                        <div>
+                            <h1>Ціна квитка:</h1>
+                            <input className="TicketPrice" type="text" id="ticketPrice" name="ticketPrice" maxlength="4" required />
+                        </div>
                     </div>
                 </div>
                 <div className="right-column">

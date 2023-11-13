@@ -17,7 +17,7 @@ function ConcertsEvent() {
                 </div>
                 <div className="event-details">
                     <div className="event-title">Тимчасова Назва</div>
-                    <div className="event-info">6 грудня 2023 р., 19:00</div>
+                    <div className="event-info">06.12.2023 р., 19:00</div>
                     <div className="event-location"><img src={sity_icon} alt="sity_icon"></img>Київ</div>
                     <div className="event-price">Ціна квитка: 100<img src={uah_icon} alt="uah_icon"></img></div>
                 </div>
@@ -33,7 +33,7 @@ function ConcertsEvent() {
                 </div>
                 <div className="event-details">
                     <div className="event-title">IAMX</div>
-                    <div className="event-info">28 листопада 2023 р., 18:00</div>
+                    <div className="event-info">28.11.2023 р., 18:00</div>
                     <div className="event-location"><img src={sity_icon} alt="sity_icon"></img>Львів</div>
                     <div className="event-price">Ціна квитка: 120<img src={uah_icon} alt="uah_icon"></img></div>
                 </div>

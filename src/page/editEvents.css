@@ -67,14 +67,36 @@
     font-weight: 400;
 }
 
-.EventTitle , .EventCategory, .Venue, .Date, .Time {
+.EventTitle , .EventCategory, .Venue, .Date {
     font-family: Montserrat;
     color: white; 
     font-size: 25px;
     padding-left: 25px;
 }
 
-.InputEventTitle h1, .InputEventCategory h1, .InputVenue h1, .InputDate h1, .InputTime h1 {
+.Time {
+    width: 210px;
+    height: 70px;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.TicketPrice {
+    width: 180px;
+    height: 70px;;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    font-size: 25px !important;
+}
+
+.InputTimeAndTicketPrice {
+    display: flex;
+    justify-content: space-between; 
+    gap: 60px; 
+}
+
+.InputEventTitle h1, .InputEventCategory h1, .InputVenue h1, .InputDate h1, .InputTimeAndTicketPrice h1 {
     color:white;
     font-size: 25px;
     font-weight: 400;
