@@ -127,6 +127,8 @@ body {
     }
 
     .buy-button {
+        text-align: center;
+        justify-content: center;
         width: 240px;
         height: 65px;
     }
