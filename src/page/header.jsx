@@ -5,10 +5,12 @@ import sity_icon from "../png/icons/sity-svg.svg";
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import UserAuth from './UserAuth';
 
 
-function Header () {
-    return(
+function Header() {
+  const isAuthenticated = UserAuth();
+  return (
         <Fragment>
           <div className="container">
             <header className='header'>
@@ -28,7 +30,7 @@ function Header () {
             </a>
             <Link to="/Events">Події</Link>
             <a href="/">
-              Квитки
+            <Link to="/Tickets">Квитки</Link>
             </a>
           </nav>
         </div>
@@ -42,11 +44,12 @@ function Header () {
         </div>
         <div class="header__block4">
                 <a href="/"><img src={sity_icon} alt="sity"></img>Оберіть місто</a>
-                <Link to="/Signup">Увійти</Link>
+                <a href={isAuthenticated ? "/Profile" : "/Signup"}>
+                  {isAuthenticated ? "Профіль" : "Увійти"}
+                </a>
             </div>
             </div>
         </header>
-
         </div>
         <Outlet/>
         </Fragment>
