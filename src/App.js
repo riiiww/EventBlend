@@ -3,14 +3,14 @@ import Contents from "../src/page/Contents";
 import Signup from "../src/page/Signup";
 import Signin from "../src/page/Signin";
 import Events from "../src/page/Events";
-import Profile from "./page/Profile";
+import Profile from "../src/page/Profile";
 import CreateEvent from "../src/page/CreateEvent"
-import CategoryEvents from "./page/CategoryEvents";
-import EditEvents from "./page/EditEvents";
-import EventRegistration from "./page/EventRegistration";
-import BuyTicket from "./page/BuyTicket";
-import Tickets from "./page/Tickets";
-import CreateAds from "./page/CreateAds"
+import CategoryEvents from "../src/page/CategoryEvents";
+import EditEvents from "../src/page/EditEvents";
+import EventRegistration from "../src/page/EventRegistration";
+import BuyTicket from "../src/page/BuyTicket";
+import Tickets from "../src/page/Tickets";
+import CreateAds from "../src/page/CreateAds"
 import { Routes, Route } from "react-router-dom";
 function App() {
   

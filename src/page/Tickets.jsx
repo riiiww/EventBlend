@@ -1,6 +1,6 @@
 import './tickets.css'
 import { Link } from 'react-router-dom';
-import TemporaryName from '../png/pictures/the weeknd concert.jpg'
+import TemporaryName from '../png/pictures/ads.jpg'
 
 function Tickets() {
     return (
@@ -28,7 +28,6 @@ function Tickets() {
                     </div>
                 </div>
             </div>
-
         </header>
     )
 }
