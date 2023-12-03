@@ -5,7 +5,7 @@ import Signin from "../src/page/Signin";
 import Events from "../src/page/Events";
 import Profile from "./page/Profile";
 import CreateEvent from "../src/page/CreateEvent"
-import ConcertEvents from "./page/ConcertEvents";
+import CategoryEvents from "./page/CategoryEvents";
 import EditEvents from "./page/EditEvents";
 import EventRegistration from "./page/EventRegistration";
 import BuyTicket from "./page/BuyTicket";
@@ -25,7 +25,7 @@ function App() {
           <Route path = 'tickets' element={<Tickets />} />
           <Route path = 'createEvent' element={<CreateEvent />} />
           <Route path = 'createAds' element={<CreateAds />} />
-          <Route path = 'concertEvents' element={<ConcertEvents />} />
+          <Route path = 'categoryEvents' element={<CategoryEvents />} />
           <Route path = 'editEvents' element={<EditEvents />} />
           <Route path = 'eventRegistration' element={<EventRegistration />} />
           <Route path = 'buyTicket' element={<BuyTicket />} />
