@@ -4,7 +4,7 @@ import TemporaryName from '../png/pictures/the weeknd concert.jpg'
 
 function Tickets() {
     return (
-        <header> 
+        <header className='headerTickets'> 
             <div className='containerTickets'>
                 <Link to="/CreateAds" style={{textDecoration: 'none'}}><button className="ButtonAddAds">Додати рекламу</button></Link>
                 <div className='adsBlock'>
