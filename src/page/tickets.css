@@ -12,7 +12,7 @@
 
 .ButtonAddAds {
     width: 250px;
-    height: 55px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.50);
     border-radius: 50px;
     display: flex;
@@ -29,11 +29,7 @@
 
 .adsBlock {
     display: flex;
-    padding: 10px;
-    gap: 15px;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 10px;
+    overflow-x: auto;
 }
 
 .adsInfo {
@@ -41,9 +37,6 @@
     height: 350px;
     display: flex;
     align-items: center;
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 .adsInfo img {
