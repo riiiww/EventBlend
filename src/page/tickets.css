@@ -2,6 +2,10 @@
     height: auto;
 }
 
+.containerTickets {
+    display: grid;
+}
+
 .containerTickets a {
     text-decoration: none;
 }
