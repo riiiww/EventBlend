@@ -1,4 +1,4 @@
-.headerTickets {
+.TicketsHeader {
     height: auto;
 }
 
@@ -24,13 +24,13 @@
     padding: 10px;
     gap: 15px;
     overflow: auto;
-    scroll-snap-type: x mandatory;
+    /*scroll-snap-type: x mandatory;*/
     scroll-padding: 10px;
 }
 
 .adsInfo {
     width: 100vw;
-    height: 400px;
+    height: 350px;
     display: flex;
     align-items: center;
     flex: 0 0 100%;
@@ -40,7 +40,7 @@
 
 .adsInfo img {
     width: 25%;
-    height: 400px;
+    height: 350px;
     margin-left: auto;
     margin-left: 50px;
     box-shadow: rgba(255, 255, 255, 0.28) 0px 48px 100px 0px;
@@ -55,10 +55,12 @@
 
 .adsDescription .adsText {
     text-align: center;
+    font-size: 30px;
 }
 
 .adsDescription h1 {
     color: white;
     font-family: Montserrat;
     font-weight: 400;
+    font-size: 25px;
 }
