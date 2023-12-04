@@ -1,0 +1,127 @@
+.animationLines {
+    position: absolute;
+    z-index: 0;
+}
+
+.containerCreateAds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CreateAdsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1800px;
+    height: 720px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+    gap: 15px;
+}
+
+.infoAdsBlock {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inputAdsBlock {
+    display: grid;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+.blockAdsImage {
+    width: 1700px;
+    height: 340px;
+    background: rgba(0, 0, 0, 0.30);
+    margin-top: 50px;
+}
+
+.blockAdsImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.ButtonAddImageForAds {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.textCreatingAds {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+.inputAdsBlockTitle, .inputAdsBlockExpiration {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.EventTitleForAds {
+    width: 350px;
+    height: 65px;
+    border-radius: 90px;
+    background-color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    color: white; 
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+.ExpirationDateAds {
+    width: 110px;
+    height: 65px;
+    border-radius: 90px;
+    background-color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    color: white; 
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+.labelCreateAds {
+    font-family: Montserrat;
+    font-size: 20px;
+    color:white;
+    margin-left: 5%;
+}
+
+.ButtonAddImageForAds {
+    width: 350px;
+    height: 65px;
+    border-radius: 90px;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.ButtonCreateAds {
+    width: 200px;
+    height: 55px;
+    border-radius: 90px;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: Montserrat;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
