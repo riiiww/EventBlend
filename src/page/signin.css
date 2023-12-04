@@ -40,6 +40,11 @@
     color: #FFF;
     font-size: 32px;
     font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.signinBlock4 button:hover {
+    background-color: #1b1b1bea;
 }
 
 .signinBlock1 {

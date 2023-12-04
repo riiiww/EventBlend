@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Інші ігноровані файли та каталоги...
+server.js
+db.js

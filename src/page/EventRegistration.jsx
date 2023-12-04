@@ -11,13 +11,13 @@ function EventRegistration() {
                 <h1 className="textRegistrationContent">Квиток на найкращу подію!</h1>
                 <div className="formContainer">
                     <label className="labelEventRegistration" htmlFor="name">ПІБ:</label>
-                    <input className="name" type="text" id="name" name="name" required />
+                    <input className="name" type="text" id="name" name="name" required autocomplete="off"/>
 
                     <label className="labelEventRegistration" htmlFor="phone">Номер телефону:</label>
-                    <input className="phone" type="tel" id="phone" name="phone" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required />
+                    <input className="phone" type="tel" id="phone" name="phone" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required autocomplete="off" />
 
                     <label className="labelEventRegistration" htmlFor="email">E-mail:</label>
-                    <input className="email" type="email" id="email" name="email" required />
+                    <input className="email" type="email" id="email" name="email" required autocomplete="off" />
 
                     <label className="labelEventRegistration" htmlFor="quantityTickets">Кількість квитків:</label>
                     <input className="quantityTickets" type="number" id="quantityTickets" name="quantityTickets" min="1" max="10" required />

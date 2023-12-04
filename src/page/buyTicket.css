@@ -109,6 +109,11 @@
     font-size: 25px;
     font-weight: 400;
     margin-top: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.payButton:hover {
+    background-color: #1b1b1bea;
 }
 
 .labelBuyTicket {

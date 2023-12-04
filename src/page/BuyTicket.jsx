@@ -56,17 +56,17 @@ function BuyTicket() {
                 <h1 className="TextTicketPrice">До сплати - 100<img src={uah_icon_white} alt="uah_icon"></img></h1>
                 <div className="inputContainer">
                     <label className="labelBuyTicket" htmlFor="creditCard">Номер картки:</label>
-                    <input className="creditCard" type="text" id="creditCard" name="creditCard" pattern="\d*" maxLength="19" placeholder="0000 0000 0000 0000" required onInput={(e) => formatCreditCardNumber(e.target)} />
+                    <input className="creditCard" type="text" id="creditCard" name="creditCard" pattern="\d*" maxLength="19" placeholder="0000 0000 0000 0000" required autocomplete="off" onInput={(e) => formatCreditCardNumber(e.target)} />
                 </div>
                 <div className="InputDataContainer">
                     <div className="inputdataContainer">
                         <label className="labelBuyTicket" htmlFor="expiryDate">Термін дії:</label>
-                        <input className="expiryDate" type="text" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" placeholder="MM/YY" required onInput={(e) => formatExpiryDate(e.target)} />
+                        <input className="expiryDate" type="text" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" placeholder="MM/YY" required autocomplete="off" onInput={(e) => formatExpiryDate(e.target)} />
                     </div>
 
                     <div className="inputdataContainer">
                         <label className="labelBuyTicket" htmlFor="cvv2">CVV2:</label>
-                        <input className="cvv2" type="password" id="cvv2" name="cvv2" maxlength="3" pattern="\d{3}" placeholder="***" required onInput={(e) => formatCVV2(e.target)} />
+                        <input className="cvv2" type="password" id="cvv2" name="cvv2" maxlength="3" pattern="\d{3}" placeholder="***" required autocomplete="off" onInput={(e) => formatCVV2(e.target)} />
                     </div>
                 </div>
                 <div className="inputContainer">

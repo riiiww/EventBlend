@@ -46,6 +46,13 @@
     margin-right: 25px;
 }
 
+.deleteicon img {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 30px 30px 0px 0px;
+}
+
 .SaveChanges {
     width: 300px;
     height: 65px;
@@ -57,9 +64,12 @@
     position: absolute;
     bottom: 35px; 
     right: 0;
-    margin-right: 175px;
+    margin-right: 65px;
 }
 
+.ChangeImage:hover, .SaveChanges:hover {
+    background-color: #1b1b1bea;
+}
 .SaveChanges h1 {
     color: #FFF;
     font-family: Montserrat;
@@ -115,9 +125,16 @@
 
 .right-column {
     margin-top: 60px;
-    margin-right: 110px;
     display: flex;
+    align-items: center;
+    position: relative;
     flex-direction: column; 
+    margin-left: 100px;
     gap: 30px;
 }
 
+.event-image {
+    padding-left: 15px;
+    width: 400px;
+    height: 380px;
+}

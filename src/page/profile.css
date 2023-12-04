@@ -39,7 +39,7 @@
   font-size: 25px;
   font-weight: 400;
   margin-left: 70px;
-  transition: background-color 0.3s ease;
+  transition: .2 linear;
 }
 
 .buttonExit {
@@ -48,7 +48,7 @@
 }
 
 .buttonExit:hover, .buttonSaveRole:hover {
-  background-color: #1b1b1bea;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #934baf;
 }
 .checkboxisOrganizer input {
   position: absolute;

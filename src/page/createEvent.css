@@ -81,6 +81,8 @@
 
 .Image {
     padding-top: 45px;
+    width: 400px;
+    height: 380px;
 }
 
 .ButtonAddImage {
@@ -120,6 +122,9 @@
     margin-bottom: 20px;
 }
 
+.ButtonNewEvent:hover, .ButtonAddImage:hover {
+    background-color: #1b1b1bea;
+}
 .ButtonNewEvent h1 {
     color: #FFF;
     font-family: Montserrat;
@@ -128,12 +133,12 @@
 }
 
 .NewEvent {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.EventTitle , .EventCategory, .Venue, .Date, .Time {
+.EventTitle , .EventCategory, .Venue, .Date, .Time, .TicketPrice {
     font-family: Montserrat;
     color: white; 
     font-size: 25px;
