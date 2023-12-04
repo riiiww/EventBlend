@@ -1,8 +1,8 @@
-import './tickets.css'
+import './ticketsForEvents.css'
 import { Link } from 'react-router-dom';
 import TemporaryName from '../png/pictures/ads.jpg'
 
-function Tickets() {
+function TicketsForEvents() {
     return (
         <header className='headerTickets'> 
             <div className='containerTickets'>
@@ -34,4 +34,4 @@ function Tickets() {
     )
 }
 
-export default Tickets;
+export default TicketsForEvents;

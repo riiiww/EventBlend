@@ -9,7 +9,7 @@ import CategoryEvents from "../src/page/CategoryEvents";
 import EditEvents from "../src/page/EditEvents";
 import EventRegistration from "../src/page/EventRegistration";
 import BuyTicket from "../src/page/BuyTicket";
-import Tickets from "../src/page/Tickets";
+import TicketsForEvents from "../src/page/TicketsForEvents"
 import CreateAds from "../src/page/CreateAds"
 import { Routes, Route } from "react-router-dom";
 function App() {
@@ -22,7 +22,7 @@ function App() {
           <Route path = 'signin' element={<Signin />} />
           <Route path = 'profile' element={<Profile />} />
           <Route path = 'events' element={<Events />} />
-          <Route path = 'tickets' element={<Tickets />} />
+          <Route path = 'ticketsForEvents' element={<TicketsForEvents />} />
           <Route path = 'createEvent' element={<CreateEvent />} />
           <Route path = 'createAds' element={<CreateAds />} />
           <Route path = 'categoryEvents' element={<CategoryEvents />} />

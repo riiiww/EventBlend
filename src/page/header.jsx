@@ -30,7 +30,7 @@ function Header() {
             </a>
             <Link to="/Events">Події</Link>
             <a href="/">
-            <Link to="/Tickets">Квитки</Link>
+            <Link to="/ticketsForEvents">Квитки</Link>
             </a>
           </nav>
         </div>
