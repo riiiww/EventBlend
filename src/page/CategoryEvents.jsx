@@ -48,7 +48,9 @@ function CategoryEvents() {
     const toggleSortByDate = () => {
       setSortByDate(!sortByDate);
     };
-
+    const handleEditEvent = (eventId) => {
+      sessionStorage.setItem('eventId', eventId);
+    };
   return (
     <header className="concerts-header">
       <div className="SortByDate" onClick={toggleSortByDate}>
@@ -65,9 +67,9 @@ function CategoryEvents() {
             <div className="event-location"><img src={sity_icon} alt="sity_icon" />{event.Venue}</div>
             <div className="event-price">Ціна квитка: {event.TicketPrice}<img src={uah_icon} alt="uah_icon" /></div>
           </div>  
-          {isAuthenticated && isOrganizer && (<Link to="/EditEvents"><img src={pencil_icon} alt="pencil_icon" className="pencil-icon" />{sessionStorage.setItem('eventId', event.eventId)}</Link>)}
+          {isAuthenticated && isOrganizer && (<Link to="/EditEvents" onClick={() => handleEditEvent(event.eventId)}><img src={pencil_icon} alt="pencil_icon" className="pencil-icon" /></Link>)}
           <div className="event-actions">
-            <Link to="/EventRegistration"><button className="buy-button" >Придбати</button></Link>
+            <Link to="/EventRegistration"><button className="buy-button" >Зареєструватися</button></Link>
           </div>
         </div>
       ))}

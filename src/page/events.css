@@ -8,20 +8,20 @@
 .categories1, .categories2 {
     display: flex;
     justify-content: space-between;
-    width: 80%; /* Заповнити всю ширину блоку */
+    width: 80%; 
 }
 
 .eventBlock1, .eventBlock2, .eventBlock3, .eventBlock4, .eventBlock5, .eventBlock6 {
     flex: 0 0 calc(33.33% - 20px);
-    margin: 10px; /* Збільшіть це значення, якщо потрібно зменшити відстань між блоками */
+    margin: 10px; 
     margin-top: 60px;
     text-align: center;
 }
 
 .eventBlock1 img, .eventBlock2 img, .eventBlock3 img, .eventBlock4 img, .eventBlock5 img, .eventBlock6 img {
     max-width: 100%;
-    display: block; /* Забезпечує правильне центрування */
-    margin: 0 auto; /* Розміщення по центру */
+    display: block; 
+    margin: 0 auto; 
     text-align: center;
 }
 
@@ -35,11 +35,11 @@
     font-size: 32px;
     font-weight: 400;
     top: 50%;
-    left: 50%; /* Розміщення в центрі горизонталі */
-    transform: translate(-50%, -50%); /* Зсув на 50% ширини та висоти тексту */
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     color: #fff;
-    padding: 10px 20px; /* Поправки для стилізації тексту */
-    z-index: 1; /* Розміщення поверх інших елементів */
+    padding: 10px 20px; 
+    z-index: 1;
 }
 
 .CreateEvent {
@@ -61,4 +61,24 @@
     font-weight: 400;
     text-decoration: none;
     color: white;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1900px) {
+    .categories1, .categories2 {
+        width: 75%;
+        height: 80%;
+    }
+
+    .eventBlock1 img, .eventBlock2 img, .eventBlock3 img, .eventBlock4 img, .eventBlock5 img, .eventBlock6 img {
+        max-width: 100%;
+        height: 260px;
+    }
+
+    .eventBlock1, .eventBlock2, .eventBlock3, .eventBlock4, .eventBlock5, .eventBlock6 {
+        margin-top: 2svh;
+    }
+
+    .image-text {
+        font-size: 30px;
+    }
 }

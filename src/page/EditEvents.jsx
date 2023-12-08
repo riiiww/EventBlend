@@ -14,6 +14,16 @@ const eventCategories = [
   'Корпоративи',
 ];
 
+const Ukraine_cities = [
+  "Київ", "Харків", "Одеса", "Дніпро", "Донецьк", "Запоріжжя", "Львів", "Кривий Ріг", "Миколаїв", "Маріуполь",
+  "Вінниця", "Херсон", "Полтава", "Чернігів", "Чернівці", "Житомир", "Суми", "Івано-Франківськ", "Кам'янець-Подільський",
+  "Тернопіль", "Луцьк", "Біла Церква", "Кременчук", "Кропивницький", "Мелітополь", "Нікополь", "Ужгород", "Бердянськ",
+  "Севастополь", "Ізмаїл", "Іршава", "Краматорськ", "Слов'янськ", "Керч", "Євпаторія", "Сімферополь", "Луганськ", "Дружківка",
+  "Макіївка", "Бердичів", "Жовква", "Дрогобич", "Мукачеве", "Нововолинськ", "Бровари", "Коростень", "Черкаси", "Павлоград",
+  "Ковель", "Кременець", "Скадовськ", "Бориспіль", "Красноармійськ", "Хмельницький", "Лисичанськ", "Лубни", "Рівне",
+  "Словута", "Стрий", "Суми", "Хуст", "Ялта", "Яремче", "Хотин", "Шостка", "Шпола", "Щастя", "Щолкіне"
+];
+
 function EditEvents() {
   const eventId = sessionStorage.getItem('eventId');
   const [formData, setFormData] = useState({
@@ -55,13 +65,19 @@ function EditEvents() {
     fetchEventData();
   }, [eventId]);
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const { name, value, files } = e.target;
     if (name === 'Image') {
+      const imageFile = files[0];
+  
       setFormData((prevData) => ({
         ...prevData,
-        [name]: files[0],  
+        [name]: imageFile,
       }));
+  
+      if (imageFile) {
+        await handleImageUpload(imageFile);
+      }
     } else {
       setFormData((prevData) => ({
         ...prevData,
@@ -69,21 +85,17 @@ function EditEvents() {
       }));
     }
   };
-
-  const handleImageUpload = async () => {
+  
+  const handleImageUpload = async (imageFile) => {
     try {
       const formDataImage = new FormData();
-      formDataImage.append('image', formData.Image);
-      formDataImage.append('eventId', eventId);
-      const response = await axios.post('http://localhost:3000/uploadImage', formDataImage, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      formDataImage.append('image', imageFile);
+      formDataImage.append('eventId', formData.eventId);
+  
+      const response = await axios.post('http://localhost:3000/uploadImage', formDataImage);
       setFormData((prevData) => ({
         ...prevData,
         Image: response.data.imageUrl,
-        ImageURL: '',
       }));
     } catch (error) {
       console.error('Error uploading image:', error);
@@ -108,7 +120,6 @@ function EditEvents() {
       navigate('/Events');
     } catch (error) {
       console.error('Error updating event:', error);
-      // Додайте логіку для обробки помилок
     }
   };
   const handleDelete = async () => {
@@ -143,7 +154,13 @@ function EditEvents() {
                     </div>
                     <div className="InputVenue">
                         <h1>Місце проведення:</h1>
-                        <input className="Venue" type="text" id="Venue" name="Venue" required minlength="6" maxlength="20" autocomplete="off" value={formData.Venue} onChange={handleChange}/>
+                        <select className="Venue" type="text" id="city" name="Venue" required autocomplete="off" onChange={handleChange} value={formData.Venue} >
+                                {Ukraine_cities.map((city) => (
+                                  <option key={city} value={city}>
+                                    {city}
+                                  </option>
+                                ))}
+                        </select>
                     </div>
                     <div className="InputDate">
                         <h1>Дата:</h1>
@@ -164,8 +181,11 @@ function EditEvents() {
                     <div className="event-image">
                       <img src={formData.Image || formData.ImageURL} alt="EventImage" style={{ width: '400px', height: '380px' }} />
                     </div>
-                    <input type="file" id="image" name="Image" className="inputImage" accept="image/*" onChange={handleChange} />
-                    <button className="ChangeImage" onClick={handleImageUpload}><h1>Змінити зображення</h1><img src={imageIcon} alt="ImageIcon" /></button>
+                    <label className="ButtonAddimage" htmlFor="image">
+                        <h1>Додати зображення</h1>
+                        <img src={imageIcon} alt="ImageIcon" />
+                        <input type="file" id="image" name="Image" accept="image/*" onChange={handleChange} style={{ display: 'none' }} />
+                    </label>
                     <button className="SaveChanges" onClick={handleSubmit}><h1>Зберегти зміни</h1></button>
                 </div>
                 <div className="deleteicon" onDoubleClick={handleDelete}><img src={deleteIcon} alt="deleteIcon"/></div>

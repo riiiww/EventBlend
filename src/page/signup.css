@@ -1,6 +1,5 @@
 .animationLines {
   width: 100%;
-  margin: 120px 0; 
   position: absolute;
 }
 
@@ -10,6 +9,10 @@
 }
 
 .signupBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 800px;
   height: 800px;
   border-radius: 190px;
@@ -20,6 +23,8 @@
 }
 
 .signupBlock1 {
+  justify-content: center;
+  align-items: center;
   padding-top: 100px;
 }
 
@@ -50,12 +55,8 @@
 }
 
 .signupBlock5 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
   margin-top: 30px;
-  margin-left: 240px;
 }
   
 .signupBlock6 button {
@@ -76,8 +77,8 @@
 
 .signupBlock6 {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 153px;
   margin-top: 20px;
   gap: 15px;
 }

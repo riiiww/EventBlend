@@ -16,6 +16,16 @@ const eventCategories = [
   'Корпоративи',
 ];
 
+const Ukraine_cities = [
+  "Київ", "Харків", "Одеса", "Дніпро", "Донецьк", "Запоріжжя", "Львів", "Кривий Ріг", "Миколаїв", "Маріуполь",
+  "Вінниця", "Херсон", "Полтава", "Чернігів", "Чернівці", "Житомир", "Суми", "Івано-Франківськ", "Кам'янець-Подільський",
+  "Тернопіль", "Луцьк", "Біла Церква", "Кременчук", "Кропивницький", "Мелітополь", "Нікополь", "Ужгород", "Бердянськ",
+  "Севастополь", "Ізмаїл", "Іршава", "Краматорськ", "Слов'янськ", "Керч", "Євпаторія", "Сімферополь", "Луганськ", "Дружківка",
+  "Макіївка", "Бердичів", "Жовква", "Дрогобич", "Мукачеве", "Нововолинськ", "Бровари", "Коростень", "Черкаси", "Павлоград",
+  "Ковель", "Кременець", "Скадовськ", "Бориспіль", "Красноармійськ", "Хмельницький", "Лисичанськ", "Лубни", "Рівне",
+  "Словута", "Стрий", "Суми", "Хуст", "Ялта", "Яремче", "Хотин", "Шостка", "Шпола", "Щастя", "Щолкіне"
+];
+
 function CreateEvent() {
   const [formData, setFormData] = useState({
     eventId: Date.now(),
@@ -32,13 +42,19 @@ function CreateEvent() {
 
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const { name, value, files } = e.target;
     if (name === 'Image') {
+      const imageFile = files[0];
+  
       setFormData((prevData) => ({
         ...prevData,
-        [name]: files[0],  
+        [name]: imageFile,
       }));
+  
+      if (imageFile) {
+        await handleImageUpload(imageFile);
+      }
     } else {
       setFormData((prevData) => ({
         ...prevData,
@@ -46,12 +62,13 @@ function CreateEvent() {
       }));
     }
   };
-
-  const handleImageUpload = async () => {
+  
+  const handleImageUpload = async (imageFile) => {
     try {
       const formDataImage = new FormData();
-      formDataImage.append('image', formData.Image);
-      formDataImage.append('eventId', formData.eventId); 
+      formDataImage.append('image', imageFile);
+      formDataImage.append('eventId', formData.eventId);
+  
       const response = await axios.post('http://localhost:3000/uploadImage', formDataImage);
       setFormData((prevData) => ({
         ...prevData,
@@ -99,7 +116,13 @@ function CreateEvent() {
                         </div>
                         <div className="createEventBlock3">
                             <h1>Місце проведення:</h1>
-                            <input className="Venue" type="text" id="city" name="Venue" required minlength="6" maxlength="20" autocomplete="off" onChange={handleChange} value={formData.Venue}/>
+                            <select className="Venue" type="text" id="city" name="Venue" required autocomplete="off" onChange={handleChange} value={formData.Venue} >
+                                {Ukraine_cities.map((city) => (
+                                  <option key={city} value={city}>
+                                    {city}
+                                  </option>
+                                ))}
+                            </select>
                         </div>
                         <div className="createEventBlock4">
                             <h1>Дата:</h1>
@@ -120,13 +143,11 @@ function CreateEvent() {
                     <div className="Image">
                         <img src={formData.Image ? formData.Image : noImage} alt="NoImage" style={{ width: '320px', height: '320px' }}/>
                       </div>
-                      <div className="ImageInput">
-                       <input type="file" id="image" name="Image" accept="image/*" onChange={handleChange} />
-                      </div>
-                            <button className="ButtonAddImage" onClick={handleImageUpload}>
-                                <h1>Додати зображення</h1>
-                                    <img src={imageIcon} alt="ImageIcon" />
-                            </button>
+                        <label className="ButtonAddImage" htmlFor="image">
+                          <h1>Додати зображення</h1>
+                          <img src={imageIcon} alt="ImageIcon" />
+                          <input type="file" id="image" name="Image" accept="image/*" onChange={handleChange} style={{ display: 'none' }} />
+                        </label>
                         <div className="NewEvent">
                           {errorMessage && <p style={{ color: 'red', margin: '0' }}>{errorMessage}</p>}
                           <button className="ButtonNewEvent" onClick={handleSubmit}><h1>Створити подію</h1></button>

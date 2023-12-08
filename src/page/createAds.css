@@ -125,3 +125,11 @@
     margin-bottom: 15px;
 }
 
+.sizeWarning {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+    position: absolute;
+    text-shadow: 6px 2px 12px red;
+}

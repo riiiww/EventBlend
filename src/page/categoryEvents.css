@@ -60,11 +60,11 @@ body {
 }
 
 .buy-button {
-    width: 282px;
+    width: 300px;
     height: 75px;
     border-radius: 90px;
     background: rgba(0, 0, 0, 0.30);
-    font-size: 35px;
+    font-size: 31px;
     color: white;
     font-family: Montserrat;
     text-decoration: none;
