@@ -55,7 +55,7 @@ function TicketsForEvents() {
                             <button style={{ width: '50px', height: '50px' }} className="scrollRightButton" onClick={scrollRight}></button>
                         </div>
                         {adImages.map((imageUrl, index) => (
-                            <div key={index} className='advert'>
+                            <div key={index} className='adsOne'>
                                 <img src={imageUrl} alt={`adsImage-${index}`} className="adsImage" />
                             </div>
                         ))}
