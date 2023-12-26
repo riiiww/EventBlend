@@ -44,7 +44,7 @@ function TicketsForEvents() {
     }, []); 
 
     return (
-        <header className='headerTickets'>
+        <div className='headerTickets'>
             <div className='containerTickets'>
                 {isAuthenticated && isOrganizer && <Link to="/CreateAds" style={{ textDecoration: 'none' }}>
                     <button className="ButtonAddAds">Додати рекламу</button>
@@ -71,7 +71,7 @@ function TicketsForEvents() {
                     <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
                 </div>
             </div>
-        </header>
+        </div>
     );
 }
 

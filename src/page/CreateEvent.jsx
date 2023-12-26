@@ -80,7 +80,7 @@ function CreateEvent() {
       formDataImage.append('image', imageFile);
       formDataImage.append('eventId', formData.eventId);
   
-      const response = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/uploadImage', formDataImage);
+      const response = await axios.post('http://localhost:3002/uploadImage', formDataImage);
       setFormData((prevData) => ({
         ...prevData,
         Image: response.data.imageUrl,
