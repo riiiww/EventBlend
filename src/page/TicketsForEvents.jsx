@@ -42,44 +42,24 @@ function TicketsForEvents() {
 
         return () => clearInterval(intervalId);
     }, []); 
-    if(adsBlockRef){
-        return (
-            <div className='headerTickets'>
-                <div className='containerTickets'>
-                    {isAuthenticated && isOrganizer && <Link to="/CreateAds" style={{ textDecoration: 'none' }}>
-                        <button className="ButtonAddAds">Додати рекламу</button>
-                    </Link>}
-                    <div className='adsBlock' ref={adsBlockRef}>
-                        <div className='scrollButtons'>
-                            <button style={{ width: '50px', height: '50px' }} className="scrollLeftButton" onClick={scrollLeft}></button>
-                            <button style={{ width: '50px', height: '50px' }} className="scrollRightButton" onClick={scrollRight}></button>
-                        </div>
-                        {adImages.map((imageUrl, index) => (
-                            <div key={index} className='adsOne'>
-                                <img src={imageUrl} alt={`adsImage-${index}`} className="adsImage" />
-                            </div>
-                        ))}
-                    </div>
-                    <div className='contTickets'>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                        <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
-                    </div>
-                </div>
-            </div>
-        );
-    }else{
-        return (
+
+    return (
         <div className='headerTickets'>
             <div className='containerTickets'>
                 {isAuthenticated && isOrganizer && <Link to="/CreateAds" style={{ textDecoration: 'none' }}>
                     <button className="ButtonAddAds">Додати рекламу</button>
                 </Link>}
+                <div className='adsBlock' ref={adsBlockRef}>
+                    <div className='scrollButtons'>
+                        <button style={{ width: '50px', height: '50px' }} className="scrollLeftButton" onClick={scrollLeft}></button>
+                        <button style={{ width: '50px', height: '50px' }} className="scrollRightButton" onClick={scrollRight}></button>
+                    </div>
+                    {adImages.map((imageUrl, index) => (
+                        <div key={index} className='adsOne'>
+                            <img src={imageUrl} alt={`adsImage-${index}`} className="adsImage" />
+                        </div>
+                    ))}
+                </div>
                 <div className='contTickets'>
                     <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
                     <div className='lll'><img style={{width: '200px', height: '200px'}}src={tik} alt="adsImage" className="adsImage" /></div>
@@ -92,8 +72,7 @@ function TicketsForEvents() {
                 </div>
             </div>
         </div>
-    );}
-    
+    );
 }
 
 export default TicketsForEvents;
