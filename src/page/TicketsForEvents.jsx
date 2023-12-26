@@ -27,7 +27,7 @@ function TicketsForEvents() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/getAllImageUrls');
+                const response = await axios.get('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/getAllImageUrls');
                 setAdImages(response.data.imageUrls);
             } catch (error) {
                 console.error('Помилка при отриманні imageUrl:', error);

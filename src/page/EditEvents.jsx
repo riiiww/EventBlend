@@ -43,7 +43,7 @@ function EditEvents() {
   useEffect(() => {
     const fetchEventData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/events/${eventId}`);
+        const response = await axios.get(`http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/events/${eventId}`);
         const eventData = response.data;
 
         setFormData((prevData) => ({
@@ -100,7 +100,7 @@ function EditEvents() {
       formDataImage.append('image', imageFile);
       formDataImage.append('eventId', formData.eventId);
   
-      const response = await axios.post('http://localhost:3000/uploadImage', formDataImage);
+      const response = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/uploadImage', formDataImage);
       setFormData((prevData) => ({
         ...prevData,
         Image: response.data.imageUrl,
@@ -115,7 +115,7 @@ function EditEvents() {
     await handleImageUpload();
     try {
       await axios.put(
-        `http://localhost:3000/editEvent`,
+        `http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/editEvent`,
         formData,
         {
           headers: {
@@ -133,7 +133,7 @@ function EditEvents() {
     const isConfirmed = window.confirm('Ви впевнені, що хочете видалити подію?');
     if(isConfirmed){
       try {
-        await axios.delete(`http://localhost:3000/deleteEvent/${eventId}`);
+        await axios.delete(`http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/deleteEvent/${eventId}`);
         navigate('/Events');
       } catch (error) {
         console.error('Error deleting event:', error);

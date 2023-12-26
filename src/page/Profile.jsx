@@ -26,7 +26,7 @@ function Profile() {
           return;
         }
 
-        const response = await axios.get('http://localhost:3000/userData', {
+        const response = await axios.get('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/userData', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ function Profile() {
     }
   
     try {
-      await axios.post('http://localhost:3000/logout', {});
+      await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/logout', {});
       localStorage.removeItem('token');
       localStorage.removeItem('role');
       navigate('/');
@@ -70,7 +70,7 @@ function Profile() {
   
     try {
       const response = await axios.post(
-        'http://localhost:3000/addRole',
+        'http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/addRole',
         {},
         {
           headers: {

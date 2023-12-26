@@ -31,7 +31,7 @@ function CreateAds() {
       formData.append('expirationDateAds', expirationDateAds);
       formData.append('image', selectedImageFile);
   
-      const responseImage = await axios.post('http://localhost:3000/uploadImageAds', formData, {
+      const responseImage = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/uploadImageAds', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,
@@ -40,7 +40,7 @@ function CreateAds() {
   
       const imageUrl = responseImage.data.imageUrl;
   
-      const responseCreateAds = await axios.post('http://localhost:3000/createAds', {
+      const responseCreateAds = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/createAds', {
         eventTitle,
         expirationDateAds,
         imageUrl,

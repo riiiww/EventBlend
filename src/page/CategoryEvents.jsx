@@ -18,7 +18,7 @@ function CategoryEvents() {
     useEffect(() => {
       const fetchEvents = async () => {
         try {
-          const response = await axios.get("http://localhost:3000/events");
+          const response = await axios.get("http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/events");
           const sortedEvents = sortByDate ? sortEventsByDate(response.data) : response.data;
           setEvents(sortedEvents);
         } catch (error) {

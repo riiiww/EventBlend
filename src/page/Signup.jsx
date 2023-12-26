@@ -26,7 +26,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/register', formData);
+      const response = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/register', formData);
       navigate('/Signin');
       window.location.reload();
       console.log(response.data);

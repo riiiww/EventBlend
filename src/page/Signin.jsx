@@ -25,7 +25,7 @@ function Signin() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/login', formData);
+            const response = await axios.post('http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/login', formData);
             navigate('/');
             window.location.reload();
             const token = response.data.token;
