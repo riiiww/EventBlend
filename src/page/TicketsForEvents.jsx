@@ -12,6 +12,7 @@ function TicketsForEvents() {
     const adsBlockRef = useRef(null);
     const [adImages, setAdImages] = useState([]);
 
+    const [advertHave, setAdvertHave] = useState(true);
     const scrollRight = () => {
         if (adsBlockRef.current) {
             adsBlockRef.current.scrollLeft += 1935;
@@ -31,6 +32,7 @@ function TicketsForEvents() {
                 setAdImages(response.data.imageUrls);
             } catch (error) {
                 console.error('Помилка при отриманні imageUrl:', error);
+                setAdvertHave(false);
             }
         };
 
@@ -42,7 +44,7 @@ function TicketsForEvents() {
 
         return () => clearInterval(intervalId);
     }, []); 
-    if(setAdImages){
+    if(advertHave){
         return (
             <div className='headerTickets'>
                 <div className='containerTickets'>
