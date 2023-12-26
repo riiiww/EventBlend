@@ -47,7 +47,7 @@ function TicketsForEvents() {
                         <button className="ButtonAddAds">Додати рекламу</button>
                     </Link>
                 )}
-                <div className='adsBlock' style={{ scrollLeft: scrollPosition }}>
+                <div className='adsBlock' >
                     <div className='scrollButtons'>
                         <button style={{ width: '50px', height: '50px' }} className="scrollLeftButton" onClick={scrollLeft}></button>
                         <button style={{ width: '50px', height: '50px' }} className="scrollRightButton" onClick={scrollRight}></button>
