@@ -1,24 +1,28 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import UserAuth from './UserAuth';
 import './ticketsForEvents.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import tik from '../png/pictures/the weeknd concert.png';
+import tik from '../png/pictures/the weeknd concert.png'
 
 function TicketsForEvents() {
     const isAuthenticated = UserAuth();
     const isOrganizer = localStorage.getItem('role') === 'Organizer';
 
-    const [scrollPosition, setScrollPosition] = useState(0);
+    const adsBlockRef = useRef(null);
     const [adImages, setAdImages] = useState([]);
 
-    const scrollRight = useCallback(() => {
-        setScrollPosition((prevPosition) => prevPosition + 1935);
-    }, []);
+    const scrollRight = () => {
+        if (adsBlockRef.current) {
+            adsBlockRef.current.scrollLeft += 1935;
+        }
+    };
 
-    const scrollLeft = useCallback(() => {
-        setScrollPosition((prevPosition) => prevPosition - 1935);
-    }, []);
+    const scrollLeft = () => {
+        if (adsBlockRef.current) {
+            adsBlockRef.current.scrollLeft -= 1935;
+        }
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,17 +41,15 @@ function TicketsForEvents() {
         }, 10000);
 
         return () => clearInterval(intervalId);
-    }, [scrollPosition, scrollRight]);
+    }, []); 
 
     return (
         <div className='headerTickets'>
             <div className='containerTickets'>
-                {isAuthenticated && isOrganizer && (
-                    <Link to="/CreateAds" style={{ textDecoration: 'none' }}>
-                        <button className="ButtonAddAds">Додати рекламу</button>
-                    </Link>
-                )}
-                <div className='adsBlock' >
+                {isAuthenticated && isOrganizer && <Link to="/CreateAds" style={{ textDecoration: 'none' }}>
+                    <button className="ButtonAddAds">Додати рекламу</button>
+                </Link>}
+                <div className='adsBlock' ref={adsBlockRef}>
                     <div className='scrollButtons'>
                         <button style={{ width: '50px', height: '50px' }} className="scrollLeftButton" onClick={scrollLeft}></button>
                         <button style={{ width: '50px', height: '50px' }} className="scrollRightButton" onClick={scrollRight}></button>
