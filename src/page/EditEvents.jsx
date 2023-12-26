@@ -67,6 +67,14 @@ function EditEvents() {
 
   const handleChange = async (e) => {
     const { name, value, files } = e.target;
+  
+    if (name === 'TicketPrice') {
+      const isValidPrice = /^\d+$/.test(value);
+  
+      if (!isValidPrice && value !== '') {
+        return;
+      }
+    }
     if (name === 'Image') {
       const imageFile = files[0];
   
@@ -106,7 +114,6 @@ function EditEvents() {
     e.preventDefault();
     await handleImageUpload();
     try {
-      // Виклик запиту PUT для редагування події
       await axios.put(
         `http://localhost:3000/editEvent`,
         formData,

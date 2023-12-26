@@ -4,47 +4,28 @@ import Lottie from 'lottie-react';
 import animationLines from "./animation/animationLines.json"
 
 function formatCreditCardNumber(input) {
-    // Видаляємо нецифрові символи із введеного тексту
     let cardNumber = input.value.replace(/\D/g, '');
-
-    // Обмежуємо довжину до 16 символів
     if (cardNumber.length > 16) {
         cardNumber = cardNumber.slice(0, 16);
     }
-  
-    // Форматуємо номер картки по 4 цифри через пробіл
     let formattedCardNumber = cardNumber.replace(/(\d{4})/g, '$1 ');
-  
-    // Оновлюємо значення в полі вводу
     input.value = formattedCardNumber.trim();
 }
 
 function formatExpiryDate(input) {
-    // Видаляємо нецифрові символи із введеного тексту
     let expiryDate = input.value.replace(/\D/g, '');
-
-    // Обмежуємо довжину до 4 символів
     if (expiryDate.length > 4) {
         expiryDate = expiryDate.slice(0, 4);
     }
-
-    // Форматуємо термін дії по 2 цифри через /
     let formattedExpiryDate = expiryDate.replace(/(\d{2})/, '$1/');
-
-    // Оновлюємо значення в полі вводу
     input.value = formattedExpiryDate.trim();
 }
 
 function formatCVV2(input) {
-    // Видаляємо нецифрові символи із введеного тексту
     let cvv2 = input.value.replace(/\D/g, '');
-
-    // Обмежуємо довжину до 3 символів
     if (cvv2.length > 3) {
         cvv2 = cvv2.slice(0, 3);
     }
-
-    // Оновлюємо значення в полі вводу
     input.value = cvv2.trim();
 }
 

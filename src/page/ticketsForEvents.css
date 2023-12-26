@@ -24,6 +24,10 @@
     font-weight: 400;
 }
 
+.ButtonAddAds:hover {
+    background-color: #1b1b1bea;
+}
+
 .adsBlock {
     display: flex;
     align-items: center;

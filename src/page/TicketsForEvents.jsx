@@ -38,7 +38,7 @@ function TicketsForEvents() {
 
         const intervalId = setInterval(() => {
             scrollRight();
-        }, 12000);
+        }, 10000);
 
         return () => clearInterval(intervalId);
     }, []); 

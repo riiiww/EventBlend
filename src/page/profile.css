@@ -48,7 +48,7 @@
 }
 
 .buttonExit:hover, .buttonSaveRole:hover {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #934baf;
+  box-shadow: 0 0 0 2px rgb(211, 183, 255), 0 0 0 4px rgb(147, 75, 175);
 }
 .checkboxisOrganizer input {
   position: absolute;

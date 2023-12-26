@@ -42,8 +42,17 @@ function CreateEvent() {
 
   const navigate = useNavigate();
 
-  const handleChange = async (e) => {
+  const handleChange = (e) => {
     const { name, value, files } = e.target;
+  
+    if (name === 'TicketPrice') {
+      const isValidPrice = /^\d+$/.test(value);
+  
+      if (!isValidPrice && value !== '') {
+        return;
+      }
+    }
+  
     if (name === 'Image') {
       const imageFile = files[0];
   
@@ -53,7 +62,7 @@ function CreateEvent() {
       }));
   
       if (imageFile) {
-        await handleImageUpload(imageFile);
+        handleImageUpload(imageFile);
       }
     } else {
       setFormData((prevData) => ({
@@ -61,7 +70,9 @@ function CreateEvent() {
         [name]: value,
       }));
     }
+    setErrorMessage('');
   };
+  
   
   const handleImageUpload = async (imageFile) => {
     try {
