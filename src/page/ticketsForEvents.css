@@ -28,8 +28,13 @@
     background-color: #1b1b1bea;
 }
 
-.adsBlock {
-    color: red;
+.advert {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 0px 0px;
+    gap: 15px;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .adsOne {
