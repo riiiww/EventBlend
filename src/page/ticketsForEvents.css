@@ -29,12 +29,7 @@
 }
 
 .adsBlock {
-    display: flex;
-    align-items: center;
-    padding: 10px 0px 0px 0px;
-    gap: 15px;
-    overflow: hidden;
-    scroll-behavior: smooth;
+    color: red;
 }
 
 .adsOne {
